@@ -3,42 +3,60 @@ package ficha;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.CharStreams;
 import org.antlr.v4.runtime.CommonTokenStream;
+import org.antlr.v4.runtime.tree.ParseTree;
+
 import java.io.IOException;
 
 public class Principal {
+
     public static void main(String[] args) {
+        // Defina aqui o nome do arquivo de entrada e saída.
+        String arquivoEntrada = args[0];
+        String arquivoSaida = args[1];
+
         try {
-            // Argumento de entrada: caminho para o arquivo com o código-fonte
-            CharStream cs = CharStreams.fromFileName(args[0]);
+            // 1. Cria o fluxo de caracteres a partir do arquivo de entrada.
+            CharStream cs = CharStreams.fromFileName(arquivoEntrada);
+
+            // 2. Cria o analisador léxico (Lexer).
             FichaLexer lexer = new FichaLexer(cs);
+
+            // 3. Cria o fluxo de tokens a partir do Lexer.
             CommonTokenStream tokens = new CommonTokenStream(lexer);
+
+            // 4. Cria o analisador sintático (Parser).
             FichaParser parser = new FichaParser(tokens);
 
-            // Remove o error listener padrão para não poluir o console.
-            parser.removeErrorListeners();
-            // Adiciona nosso error listener customizado (se você criar um).
-            // Por enquanto, vamos apenas verificar o número de erros.
+            // 5. Inicia a análise sintática pela regra 'ficha' e obtém a árvore.
+            ParseTree arvore = parser.ficha();
 
-            // Inicia a análise sintática pela regra 'ficha'
-            FichaParser.FichaContext arvore = parser.ficha();
+            // 6. Cria o analisador semântico.
+            AnalisadorSemantico analisador = new AnalisadorSemantico();
+            analisador.visit(arvore); // Executa a análise na árvore.
 
-            // Se não houver erros sintáticos, prossiga para a análise semântica.
-            if (parser.getNumberOfSyntaxErrors() == 0) {
-                AnalisadorSemantico semantico = new AnalisadorSemantico();
-                semantico.visit(arvore);
+            // 7. Verifica se existem erros semânticos.
+            AnalisadorSemanticoUtils utils = analisador.getUtils();
+            if (utils.semErros()) {
+                System.out.println("Analise semantica concluida com sucesso!");
 
-                // Após a análise, verifica se foram encontrados erros semânticos.
-                AnalisadorSemanticoUtils utils = semantico.getUtils();
-                if (utils.semErros()) {
-                    System.out.println("Compilacao bem-sucedida!");
-                    // Aqui seria o local para chamar o Gerador de Código
-                } else {
-                    // Imprime todos os erros semânticos encontrados.
-                    utils.getErrosSemanticos().forEach(System.out::println);
+                // 8. Se não houver erros, cria e usa o escritor de fichas.
+                // Esta parte assume que há apenas uma ficha por arquivo, conforme o analisador.
+                EscritorDeFicha escritor = new EscritorDeFicha(analisador.getTabela());
+                escritor.escreverFicha(arquivoSaida);
+                System.out.println("Ficha gerada com sucesso em '" + arquivoSaida + "'");
+
+            } else {
+                // Se houver erros, imprime-os.
+                System.err.println("Foram encontrados erros semanticos:");
+                for (String erro : utils.getErrosSemanticos()) {
+                    System.err.println("- " + erro);
                 }
             }
 
         } catch (IOException e) {
+            System.err.println("Erro ao ler o arquivo de entrada: " + e.getMessage());
+        } catch (Exception e) {
+            System.err.println("Ocorreu um erro inesperado: " + e.getMessage());
             e.printStackTrace();
         }
     }

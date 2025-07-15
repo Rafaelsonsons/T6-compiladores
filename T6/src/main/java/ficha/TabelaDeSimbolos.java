@@ -20,6 +20,10 @@ public class TabelaDeSimbolos {
         return tabela.containsKey(nome);
     }
 
+    public String getValor(String nome) {
+        return tabela.get(nome);
+    }
+
     public Set<String> todosOsSimbolos() {
         return tabela.keySet();
     }

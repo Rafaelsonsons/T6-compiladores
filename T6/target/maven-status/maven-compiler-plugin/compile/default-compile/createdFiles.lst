@@ -21,6 +21,7 @@ ficha\FichaVisitor.class
 ficha\Principal.class
 ficha\FichaBaseVisitor.class
 ficha\FichaParser$DeclaracaoClasseContext.class
+ficha\EscritorDeFicha.class
 ficha\FichaListener.class
 ficha\FichaParser$AtributoContext.class
 ficha\FichaParser$BlocoCaracteristicasContext.class

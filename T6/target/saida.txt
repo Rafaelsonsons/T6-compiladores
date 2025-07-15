@@ -1,0 +1,16 @@
+Nome: "Eusebio";
+Classe: Mago;
+Nivel: 7;
+
+Caracteristicas {
+	Forca: null;
+	Destreza: null;
+	Constituicao: null;
+	Inteligencia: null;
+	Sabedoria: null;
+	Carisma: null;
+}
+
+Atributos {
+	Stats: Random;
+}

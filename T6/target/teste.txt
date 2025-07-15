@@ -1,10 +1,1 @@
-Nome: "Grog";
-Classe: Guerreiro;
-Caracteristicas {
-    Forca: 20;
-    Destreza: 14;
-    Constituicao: 18;
-    Inteligencia: 6;
-    Sabedoria: 10;
-    Carisma: 9;
-}
+Mago, "Eusebio", 7 [Random]

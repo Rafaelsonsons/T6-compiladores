@@ -13,6 +13,8 @@ public class AnalisadorSemantico extends FichaBaseVisitor<Void> {
         this.utils = new AnalisadorSemanticoUtils();
     }
 
+    public TabelaDeSimbolos getTabela() { return tabela; }
+
     public AnalisadorSemanticoUtils getUtils() {
         return utils;
     }
@@ -60,12 +62,14 @@ public class AnalisadorSemantico extends FichaBaseVisitor<Void> {
     public Void visitAtribuicaoCaracteristica(FichaParser.AtribuicaoCaracteristicaContext ctx) {
         String nomeCaracteristica = ctx.nome.getText();
         if (tabela.existe(nomeCaracteristica)) {
-            // A mensagem de erro foi simplificada, pois não há ambiguidade de qual ficha é.
             utils.adicionarErroSemantico(ctx.nome.getStart(), "A caracteristica '" + nomeCaracteristica + "' ja foi declarada.");
         } else {
-            tabela.adicionar(nomeCaracteristica, "caracteristica");
+            // MODIFICAÇÃO: Salvar o valor numérico em vez de apenas "característica"
+            String valor = ctx.valor.getText();
+            tabela.adicionar(nomeCaracteristica, valor);
         }
-        return super.visitAtribuicaoCaracteristica(ctx);
+        // A visita aos filhos não é necessária aqui, pois não há sub-regras.
+        return null;
     }
 
     // REGRA: Não pode haver atributos repetidos.
@@ -75,8 +79,11 @@ public class AnalisadorSemantico extends FichaBaseVisitor<Void> {
         if (tabela.existe(nomeAtributo)) {
             utils.adicionarErroSemantico(ctx.nome.getStart(), "O atributo '" + nomeAtributo + "' ja foi declarado.");
         } else {
-            tabela.adicionar(nomeAtributo, "atributo");
+            // MODIFICAÇÃO: Salvar o valor numérico em vez de apenas "atributo"
+            String valor = ctx.valor.getText();
+            tabela.adicionar(nomeAtributo, valor);
         }
-        return super.visitAtribuicaoAtributo(ctx);
+        // A visita aos filhos não é necessária aqui.
+        return null;
     }
 }
