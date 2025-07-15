@@ -1,7 +1,5 @@
-// ERRO: Declarações de Nome e Classe repetidas.
 Nome: "Grog";
-Classe: Guerreiro;; // Primeira declaração ok.
-
+Classe: Guerreiro;
 Caracteristicas {
     Forca: 20;
     Destreza: 14;
@@ -10,6 +8,3 @@ Caracteristicas {
     Sabedoria: 10;
     Carisma: 9;
 }
-
-Nome: "Grog Strongjaw"; // <-- ERRO AQUI
-Classe: Guerreiro;    // <-- ERRO AQUI

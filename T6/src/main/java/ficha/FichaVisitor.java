@@ -1,4 +1,4 @@
-// Generated from C:/Users/felip/Desktop/Docs_Yuya/UFSCar/COMPL/T6/src/main/antlr4.ficha/Ficha.g4 by ANTLR 4.13.2
+// Generated from C:/Users/felip/Desktop/Docs_Yuya/UFSCar/COMPL/T6-Compiladores/T6/src/main/antlr4.ficha/Ficha.g4 by ANTLR 4.13.2
 package ficha;
 import org.antlr.v4.runtime.tree.ParseTreeVisitor;
 
@@ -23,6 +23,24 @@ public interface FichaVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitDeclaracao(FichaParser.DeclaracaoContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link FichaParser#classe}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitClasse(FichaParser.ClasseContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link FichaParser#caracteristica}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitCaracteristica(FichaParser.CaracteristicaContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link FichaParser#atributo}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitAtributo(FichaParser.AtributoContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link FichaParser#declaracaoNome}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -34,6 +52,12 @@ public interface FichaVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitDeclaracaoClasse(FichaParser.DeclaracaoClasseContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link FichaParser#declaracaoNivel}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitDeclaracaoNivel(FichaParser.DeclaracaoNivelContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link FichaParser#blocoCaracteristicas}.
 	 * @param ctx the parse tree
@@ -59,21 +83,21 @@ public interface FichaVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitAtribuicaoAtributo(FichaParser.AtribuicaoAtributoContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link FichaParser#classe}.
+	 * Visit a parse tree produced by {@link FichaParser#criarFichaRANDOM}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitClasse(FichaParser.ClasseContext ctx);
+	T visitCriarFichaRANDOM(FichaParser.CriarFichaRANDOMContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link FichaParser#caracteristica}.
+	 * Visit a parse tree produced by {@link FichaParser#criarFicha}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitCaracteristica(FichaParser.CaracteristicaContext ctx);
+	T visitCriarFicha(FichaParser.CriarFichaContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link FichaParser#atributo}.
+	 * Visit a parse tree produced by {@link FichaParser#lerFichaPronta}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitAtributo(FichaParser.AtributoContext ctx);
+	T visitLerFichaPronta(FichaParser.LerFichaProntaContext ctx);
 }

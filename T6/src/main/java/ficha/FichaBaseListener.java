@@ -1,4 +1,4 @@
-// Generated from C:/Users/felip/Desktop/Docs_Yuya/UFSCar/COMPL/T6/src/main/antlr4.ficha/Ficha.g4 by ANTLR 4.13.2
+// Generated from C:/Users/felip/Desktop/Docs_Yuya/UFSCar/COMPL/T6-Compiladores/T6/src/main/antlr4.ficha/Ficha.g4 by ANTLR 4.13.2
 package ficha;
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.tree.ErrorNode;
@@ -40,6 +40,42 @@ public class FichaBaseListener implements FichaListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterClasse(FichaParser.ClasseContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitClasse(FichaParser.ClasseContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterCaracteristica(FichaParser.CaracteristicaContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitCaracteristica(FichaParser.CaracteristicaContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterAtributo(FichaParser.AtributoContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitAtributo(FichaParser.AtributoContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterDeclaracaoNome(FichaParser.DeclaracaoNomeContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -59,6 +95,18 @@ public class FichaBaseListener implements FichaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitDeclaracaoClasse(FichaParser.DeclaracaoClasseContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterDeclaracaoNivel(FichaParser.DeclaracaoNivelContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitDeclaracaoNivel(FichaParser.DeclaracaoNivelContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -112,37 +160,37 @@ public class FichaBaseListener implements FichaListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterClasse(FichaParser.ClasseContext ctx) { }
+	@Override public void enterCriarFichaRANDOM(FichaParser.CriarFichaRANDOMContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitClasse(FichaParser.ClasseContext ctx) { }
+	@Override public void exitCriarFichaRANDOM(FichaParser.CriarFichaRANDOMContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterCaracteristica(FichaParser.CaracteristicaContext ctx) { }
+	@Override public void enterCriarFicha(FichaParser.CriarFichaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitCaracteristica(FichaParser.CaracteristicaContext ctx) { }
+	@Override public void exitCriarFicha(FichaParser.CriarFichaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterAtributo(FichaParser.AtributoContext ctx) { }
+	@Override public void enterLerFichaPronta(FichaParser.LerFichaProntaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitAtributo(FichaParser.AtributoContext ctx) { }
+	@Override public void exitLerFichaPronta(FichaParser.LerFichaProntaContext ctx) { }
 
 	/**
 	 * {@inheritDoc}

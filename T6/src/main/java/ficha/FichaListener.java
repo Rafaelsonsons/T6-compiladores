@@ -1,4 +1,4 @@
-// Generated from C:/Users/felip/Desktop/Docs_Yuya/UFSCar/COMPL/T6/src/main/antlr4.ficha/Ficha.g4 by ANTLR 4.13.2
+// Generated from C:/Users/felip/Desktop/Docs_Yuya/UFSCar/COMPL/T6-Compiladores/T6/src/main/antlr4.ficha/Ficha.g4 by ANTLR 4.13.2
 package ficha;
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
@@ -28,6 +28,36 @@ public interface FichaListener extends ParseTreeListener {
 	 */
 	void exitDeclaracao(FichaParser.DeclaracaoContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link FichaParser#classe}.
+	 * @param ctx the parse tree
+	 */
+	void enterClasse(FichaParser.ClasseContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link FichaParser#classe}.
+	 * @param ctx the parse tree
+	 */
+	void exitClasse(FichaParser.ClasseContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link FichaParser#caracteristica}.
+	 * @param ctx the parse tree
+	 */
+	void enterCaracteristica(FichaParser.CaracteristicaContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link FichaParser#caracteristica}.
+	 * @param ctx the parse tree
+	 */
+	void exitCaracteristica(FichaParser.CaracteristicaContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link FichaParser#atributo}.
+	 * @param ctx the parse tree
+	 */
+	void enterAtributo(FichaParser.AtributoContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link FichaParser#atributo}.
+	 * @param ctx the parse tree
+	 */
+	void exitAtributo(FichaParser.AtributoContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link FichaParser#declaracaoNome}.
 	 * @param ctx the parse tree
 	 */
@@ -47,6 +77,16 @@ public interface FichaListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitDeclaracaoClasse(FichaParser.DeclaracaoClasseContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link FichaParser#declaracaoNivel}.
+	 * @param ctx the parse tree
+	 */
+	void enterDeclaracaoNivel(FichaParser.DeclaracaoNivelContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link FichaParser#declaracaoNivel}.
+	 * @param ctx the parse tree
+	 */
+	void exitDeclaracaoNivel(FichaParser.DeclaracaoNivelContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link FichaParser#blocoCaracteristicas}.
 	 * @param ctx the parse tree
@@ -88,33 +128,33 @@ public interface FichaListener extends ParseTreeListener {
 	 */
 	void exitAtribuicaoAtributo(FichaParser.AtribuicaoAtributoContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link FichaParser#classe}.
+	 * Enter a parse tree produced by {@link FichaParser#criarFichaRANDOM}.
 	 * @param ctx the parse tree
 	 */
-	void enterClasse(FichaParser.ClasseContext ctx);
+	void enterCriarFichaRANDOM(FichaParser.CriarFichaRANDOMContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link FichaParser#classe}.
+	 * Exit a parse tree produced by {@link FichaParser#criarFichaRANDOM}.
 	 * @param ctx the parse tree
 	 */
-	void exitClasse(FichaParser.ClasseContext ctx);
+	void exitCriarFichaRANDOM(FichaParser.CriarFichaRANDOMContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link FichaParser#caracteristica}.
+	 * Enter a parse tree produced by {@link FichaParser#criarFicha}.
 	 * @param ctx the parse tree
 	 */
-	void enterCaracteristica(FichaParser.CaracteristicaContext ctx);
+	void enterCriarFicha(FichaParser.CriarFichaContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link FichaParser#caracteristica}.
+	 * Exit a parse tree produced by {@link FichaParser#criarFicha}.
 	 * @param ctx the parse tree
 	 */
-	void exitCaracteristica(FichaParser.CaracteristicaContext ctx);
+	void exitCriarFicha(FichaParser.CriarFichaContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link FichaParser#atributo}.
+	 * Enter a parse tree produced by {@link FichaParser#lerFichaPronta}.
 	 * @param ctx the parse tree
 	 */
-	void enterAtributo(FichaParser.AtributoContext ctx);
+	void enterLerFichaPronta(FichaParser.LerFichaProntaContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link FichaParser#atributo}.
+	 * Exit a parse tree produced by {@link FichaParser#lerFichaPronta}.
 	 * @param ctx the parse tree
 	 */
-	void exitAtributo(FichaParser.AtributoContext ctx);
+	void exitLerFichaPronta(FichaParser.LerFichaProntaContext ctx);
 }
