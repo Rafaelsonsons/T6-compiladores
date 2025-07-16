@@ -1,5 +1,5 @@
-// Generated from C:/Users/felip/Desktop/Docs_Yuya/UFSCar/COMPL/T6-Compiladores/T6/src/main/antlr4.ficha/Ficha.g4 by ANTLR 4.13.2
-package ficha;
+package ficha;// Generated from C:/Users/felip/Desktop/Docs_Yuya/UFSCar/COMPL/T6-Compiladores/T6/src/main/antlr4.ficha/Ficha.g4 by ANTLR 4.13.2
+
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.tree.ErrorNode;
 import org.antlr.v4.runtime.tree.TerminalNode;
@@ -191,6 +191,18 @@ public class FichaBaseListener implements FichaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitLerFichaPronta(FichaParser.LerFichaProntaContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterLerFichaProntalvlup(FichaParser.LerFichaProntalvlupContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitLerFichaProntalvlup(FichaParser.LerFichaProntalvlupContext ctx) { }
 
 	/**
 	 * {@inheritDoc}

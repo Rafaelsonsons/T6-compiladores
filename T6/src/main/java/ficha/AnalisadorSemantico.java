@@ -41,6 +41,12 @@ public class AnalisadorSemantico extends FichaBaseVisitor<Void> {
             }
         }
 
+        for (String atributoObrigatorio : AnalisadorSemanticoUtils.ATRIBUTOS_OBRIGATORIOS) {
+            if (!tabela.existe(atributoObrigatorio)) {
+                utils.adicionarErroSemantico(ctx.getStart(), "O atributo obrigatorio '" + atributoObrigatorio + "' nao foi declarado.");
+            }
+        }
+
         return null;
     }
 
@@ -51,7 +57,59 @@ public class AnalisadorSemantico extends FichaBaseVisitor<Void> {
         tabela.adicionar("Nome", limparString(ctx.nome.getText()));
         tabela.adicionar("Classe", ctx.classe().getText());
         tabela.adicionar("Nivel", ctx.NUM().getText());
-        tabela.adicionar("Stats", "Random"); // Marca que os stats são aleatórios
+        tabela.adicionar("Tipo", "Random"); // Marca que os stats são aleatórios
+
+        return null;
+    }
+
+    @Override
+    public Void visitLerFichaPronta(FichaParser.LerFichaProntaContext ctx) {
+        tabela.adicionar("Nome", limparString(ctx.declaracaoNome().nome.getText()));
+        tabela.adicionar("Classe", ctx.declaracaoClasse().classe().getText());
+        tabela.adicionar("Nivel", ctx.declaracaoNivel().nivel.getText());
+
+        tabela.adicionar("Tipo", "Ler");
+
+        super.visitLerFichaPronta(ctx);
+
+        for (String caracteristicaObrigatoria : AnalisadorSemanticoUtils.CARACTERISTICAS_OBRIGATORIAS) {
+            if (!tabela.existe(caracteristicaObrigatoria)) {
+                utils.adicionarErroSemantico(ctx.getStart(), "A caracteristica obrigatoria '" + caracteristicaObrigatoria + "' nao foi declarada.");
+            }
+        }
+
+        for (String atributoObrigatorio : AnalisadorSemanticoUtils.ATRIBUTOS_OBRIGATORIOS) {
+            if (!tabela.existe(atributoObrigatorio)) {
+                utils.adicionarErroSemantico(ctx.getStart(), "O atributo obrigatorio '" + atributoObrigatorio + "' nao foi declarado.");
+            }
+        }
+
+
+        return null;
+    }
+
+    @Override
+    public Void visitLerFichaProntalvlup (FichaParser.LerFichaProntalvlupContext ctx) {
+
+        tabela.adicionar("Nome", limparString(ctx.declaracaoNome().nome.getText()));
+        tabela.adicionar("Classe", ctx.declaracaoClasse().classe().getText());
+        tabela.adicionar("Nivel", ctx.declaracaoNivel().nivel.getText());
+        //la vai eu de novo
+        tabela.adicionar("Tipo", "UP");
+
+        super.visitLerFichaProntalvlup(ctx);
+
+        for (String caracteristicaObrigatoria : AnalisadorSemanticoUtils.CARACTERISTICAS_OBRIGATORIAS) {
+            if (!tabela.existe(caracteristicaObrigatoria)) {
+                utils.adicionarErroSemantico(ctx.getStart(), "A caracteristica obrigatoria '" + caracteristicaObrigatoria + "' nao foi declarada.");
+            }
+        }
+        //mesma coisa que os outros
+        for (String atributoObrigatorio : AnalisadorSemanticoUtils.ATRIBUTOS_OBRIGATORIOS) {
+            if (!tabela.existe(atributoObrigatorio)) {
+                utils.adicionarErroSemantico(ctx.getStart(), "O atributo obrigatorio '" + atributoObrigatorio + "' nao foi declarado.");
+            }
+        }
 
         return null;
     }
@@ -63,11 +121,11 @@ public class AnalisadorSemantico extends FichaBaseVisitor<Void> {
         if (tabela.existe(nomeCaracteristica)) {
             utils.adicionarErroSemantico(ctx.nome.getStart(), "A caracteristica '" + nomeCaracteristica + "' ja foi declarada.");
         } else {
-            // MODIFICAÇÃO: Salvar o valor numérico em vez de apenas "característica"
+            //ello, se voce estah lendo isso, eh pq eu vou me ferrar kkkkk
             String valor = ctx.valor.getText();
             tabela.adicionar(nomeCaracteristica, valor);
         }
-        // A visita aos filhos não é necessária aqui, pois não há sub-regras.
+        // poh soh comentario sem nocao aki mas e soh na zueira kkkkkkk
         return null;
     }
 
@@ -78,7 +136,6 @@ public class AnalisadorSemantico extends FichaBaseVisitor<Void> {
         if (tabela.existe(nomeAtributo)) {
             utils.adicionarErroSemantico(ctx.nome.getStart(), "O atributo '" + nomeAtributo + "' ja foi declarado.");
         } else {
-            // MODIFICAÇÃO: Salvar o valor numérico em vez de apenas "atributo"
             String valor = ctx.valor.getText();
             tabela.adicionar(nomeAtributo, valor);
         }

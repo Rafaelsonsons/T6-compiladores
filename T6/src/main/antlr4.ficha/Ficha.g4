@@ -7,6 +7,7 @@ NIVEL                 : 'Nivel';
 CARACTERISTICAS_LITERAL : 'Caracteristicas';
 ATRIBUTOS_LITERAL     : 'Atributos';
 LVLUP                 : 'LVLUP';
+
 //Tokens para as Classes
 GUERREIRO : 'Guerreiro';
 MAGO      : 'Mago';
@@ -28,7 +29,6 @@ ARMADURA   : 'Armadura';
 INICIATIVA : 'Iniciativa';
 MOVIMENTO  : 'Movimento';
 PV         : 'PV';
-PV_MAX     : 'PV Max';
 
 //Tokens Genéricos
 STRING : '"' ( ~["] )* '"';
@@ -65,6 +65,7 @@ declaracao
     : criarFicha
     | criarFichaRANDOM
     | lerFichaPronta
+    | lerFichaProntalvlup
     ;
 
 // Tipos de classes permitidas (referencia os tokens do lexer).
@@ -79,7 +80,7 @@ caracteristica
 
 // Tipos de atributos permitidos.
 atributo
-    : PRECISAO | ARMADURA | INICIATIVA | MOVIMENTO | PV | PV_MAX
+    : PRECISAO | ARMADURA | INICIATIVA | MOVIMENTO | PV
     ;
 
 // Regra para definir o nome do personagem. Ex: Nome: "Aragorn";
@@ -123,7 +124,6 @@ criarFichaRANDOM
 
 criarFicha
     : classe COMMA nome=STRING COMMA NUM LBRKT
-    blocoAtributos
     blocoCaracteristicas
     RBRKT
     ;
@@ -132,6 +132,15 @@ lerFichaPronta
     : declaracaoNome
       declaracaoClasse
       declaracaoNivel
-      blocoAtributos
       blocoCaracteristicas
+      blocoAtributos
+    ;
+
+lerFichaProntalvlup
+    : LVLUP
+      declaracaoNome
+      declaracaoClasse
+      declaracaoNivel
+      blocoCaracteristicas
+      blocoAtributos
     ;

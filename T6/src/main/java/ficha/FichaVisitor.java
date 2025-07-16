@@ -1,5 +1,4 @@
-// Generated from C:/Users/felip/Desktop/Docs_Yuya/UFSCar/COMPL/T6-Compiladores/T6/src/main/antlr4.ficha/Ficha.g4 by ANTLR 4.13.2
-package ficha;
+package ficha;// Generated from C:/Users/felip/Desktop/Docs_Yuya/UFSCar/COMPL/T6-Compiladores/T6/src/main/antlr4.ficha/Ficha.g4 by ANTLR 4.13.2
 import org.antlr.v4.runtime.tree.ParseTreeVisitor;
 
 /**
@@ -100,4 +99,10 @@ public interface FichaVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitLerFichaPronta(FichaParser.LerFichaProntaContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link FichaParser#lerFichaProntalvlup}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitLerFichaProntalvlup(FichaParser.LerFichaProntalvlupContext ctx);
 }

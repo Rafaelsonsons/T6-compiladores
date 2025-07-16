@@ -8,9 +8,9 @@ ficha\FichaParser$CriarFichaContext.class
 ficha\FichaParser$ClasseContext.class
 ficha\FichaParser$DeclaracaoContext.class
 ficha\FichaParser$DeclaracaoNomeContext.class
+ficha\FichaParser$LerFichaProntalvlupContext.class
 ficha\AnalisadorSemantico.class
 ficha\FichaBaseListener.class
-ficha\GerenciadorDeFichas.class
 ficha\FichaParser$FichaContext.class
 ficha\TabelaDeSimbolos.class
 ficha\AnalisadorSemanticoUtils.class

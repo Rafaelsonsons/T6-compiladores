@@ -1,1 +1,21 @@
-Mago, "Eusebio", 7 [Random]
+LVLUP
+Nome: "Eusebio";
+Classe: Mago;
+Nivel: 7;
+
+Caracteristicas {
+	Forca: 8;
+	Destreza: 13;
+	Constituicao: 9;
+	Inteligencia: 13;
+	Sabedoria: 5;
+	Carisma: 12;
+}
+
+Atributos {
+	Precisao: 20;
+	Armadura: 17;
+	Iniciativa: 13;
+	Movimento: 130;
+	PV: 91;
+}

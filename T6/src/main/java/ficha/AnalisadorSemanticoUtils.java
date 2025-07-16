@@ -11,7 +11,7 @@ public class AnalisadorSemanticoUtils {
     );
 
     public static final List<String> ATRIBUTOS_OBRIGATORIOS = new ArrayList<>(
-            List.of("Precisao", "Armadura", "Iniciativa", "Movimento", "PV", "PV_MAX")
+            List.of("Precisao", "Armadura", "Iniciativa", "Movimento", "PV")
     );
 
     private final List<String> errosSemanticos;

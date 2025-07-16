@@ -39,8 +39,6 @@ public class Principal {
             if (utils.semErros()) {
                 System.out.println("Analise semantica concluida com sucesso!");
 
-                // 8. Se não houver erros, cria e usa o escritor de fichas.
-                // Esta parte assume que há apenas uma ficha por arquivo, conforme o analisador.
                 EscritorDeFicha escritor = new EscritorDeFicha(analisador.getTabela());
                 escritor.escreverFicha(arquivoSaida);
                 System.out.println("Ficha gerada com sucesso em '" + arquivoSaida + "'");

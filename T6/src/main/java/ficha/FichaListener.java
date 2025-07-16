@@ -1,5 +1,4 @@
-// Generated from C:/Users/felip/Desktop/Docs_Yuya/UFSCar/COMPL/T6-Compiladores/T6/src/main/antlr4.ficha/Ficha.g4 by ANTLR 4.13.2
-package ficha;
+package ficha;// Generated from C:/Users/felip/Desktop/Docs_Yuya/UFSCar/COMPL/T6-Compiladores/T6/src/main/antlr4.ficha/Ficha.g4 by ANTLR 4.13.2
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
 /**
@@ -157,4 +156,14 @@ public interface FichaListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitLerFichaPronta(FichaParser.LerFichaProntaContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link FichaParser#lerFichaProntalvlup}.
+	 * @param ctx the parse tree
+	 */
+	void enterLerFichaProntalvlup(FichaParser.LerFichaProntalvlupContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link FichaParser#lerFichaProntalvlup}.
+	 * @param ctx the parse tree
+	 */
+	void exitLerFichaProntalvlup(FichaParser.LerFichaProntalvlupContext ctx);
 }
