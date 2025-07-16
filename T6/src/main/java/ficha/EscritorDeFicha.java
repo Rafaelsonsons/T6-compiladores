@@ -124,8 +124,6 @@ public class EscritorDeFicha {
                     atribvals.add(destreza * 10);
                     atribvals.add(constituicao * Integer.valueOf(tabela.getValor("Nivel")));
 
-                    writer.println("}");
-
                     aux = 0;
                     // Escreve o bloco de Atributos.
                     writer.println("Atributos {");
