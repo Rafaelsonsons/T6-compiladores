@@ -121,8 +121,8 @@ atribuicaoAtributo
     ;
 
 criarFichaRANDOM
-    : classe COMMA nome=STRING COMMA NUM LBRACE
-      RANDOM RBRACE
+    : classe COMMA nome=STRING COMMA NUM COMMA
+      RANDOM
     ;
 
 criarFicha

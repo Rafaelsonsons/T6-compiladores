@@ -1,21 +1,9 @@
-Nome: "Eusébio";
-Classe: Mago;
-Nivel: 7;
-
-Caracteristicas {
-	Forca: 10;
-	Destreza: 10;
-	Constituicao: 10;
-	Inteligencia: 20;
-	Sabedoria: 20;
-	Carisma: 5;
+Mago, "Eusébio", 7, { 
+Forca: 10;
+Destreza: 10;
+Constituicao: 10;
+Inteligencia: 20;
+Sabedoria: 20;
+Carisma: 5;
 }
 
-}
-Atributos {
-	Precisao: 17;
-	Armadura: 20;
-	Iniciativa: 10;
-	Movimento: 100;
-	PV: 70;
-}
