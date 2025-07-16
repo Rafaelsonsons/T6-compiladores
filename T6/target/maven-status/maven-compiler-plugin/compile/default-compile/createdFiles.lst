@@ -19,6 +19,7 @@ ficha\FichaParser$AtribuicaoCaracteristicaContext.class
 ficha\FichaParser$DeclaracaoNivelContext.class
 ficha\FichaVisitor.class
 ficha\Principal.class
+ficha\FichaParser$BlocoCaracteristicasCriarContext.class
 ficha\FichaBaseVisitor.class
 ficha\FichaParser$DeclaracaoClasseContext.class
 ficha\EscritorDeFicha.class

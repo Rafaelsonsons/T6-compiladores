@@ -34,13 +34,11 @@ PV         : 'PV';
 STRING : '"' ( ~["] )* '"';
 NUM : [0-9]+;
 
-RANDOM : 'Random';
+RANDOM : 'Random' | 'random';
 
 COMMA  : ',';
 COLON  : ':';
 SEMI   : ';';
-LBRKT  : '[';
-RBRKT  : ']';
 LBRACE : '{';
 RBRACE : '}';
 
@@ -103,6 +101,10 @@ blocoCaracteristicas
     : CARACTERISTICAS_LITERAL LBRACE atribuicaoCaracteristica+ RBRACE
     ;
 
+blocoCaracteristicasCriar
+    : LBRACE atribuicaoCaracteristica+ RBRACE
+    ;
+
 // Regra para uma única linha de característica. Ex: Forca: 18;
 atribuicaoCaracteristica
     : nome=caracteristica COLON valor=NUM SEMI
@@ -119,14 +121,14 @@ atribuicaoAtributo
     ;
 
 criarFichaRANDOM
-    : classe COMMA nome=STRING COMMA NUM LBRKT
-      RANDOM RBRKT
+    : classe COMMA nome=STRING COMMA NUM LBRACE
+      RANDOM RBRACE
     ;
 
 criarFicha
-    : classe COMMA nome=STRING COMMA NUM LBRKT
-    blocoCaracteristicas
-    RBRKT
+    : classe COMMA nome=STRING COMMA NUM
+    COMMA
+    blocoCaracteristicasCriar
     ;
 
 lerFichaPronta

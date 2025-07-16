@@ -64,6 +64,12 @@ public interface FichaVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitBlocoCaracteristicas(FichaParser.BlocoCaracteristicasContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link FichaParser#blocoCaracteristicasCriar}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitBlocoCaracteristicasCriar(FichaParser.BlocoCaracteristicasCriarContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link FichaParser#atribuicaoCaracteristica}.
 	 * @param ctx the parse tree
 	 * @return the visitor result

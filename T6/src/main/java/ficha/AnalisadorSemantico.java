@@ -30,6 +30,8 @@ public class AnalisadorSemantico extends FichaBaseVisitor<Void> {
         tabela.adicionar("Classe", ctx.classe().getText());
         tabela.adicionar("Nivel", ctx.NUM().getText());
 
+        tabela.adicionar("Tipo", "Manual");
+
         // Visita os filhos (blocoAtributos e blocoCaracteristicas) para popular o resto da tabela.
         super.visitCriarFicha(ctx);
 
@@ -38,12 +40,6 @@ public class AnalisadorSemantico extends FichaBaseVisitor<Void> {
         for (String caracteristicaObrigatoria : AnalisadorSemanticoUtils.CARACTERISTICAS_OBRIGATORIAS) {
             if (!tabela.existe(caracteristicaObrigatoria)) {
                 utils.adicionarErroSemantico(ctx.getStart(), "A caracteristica obrigatoria '" + caracteristicaObrigatoria + "' nao foi declarada.");
-            }
-        }
-
-        for (String atributoObrigatorio : AnalisadorSemanticoUtils.ATRIBUTOS_OBRIGATORIOS) {
-            if (!tabela.existe(atributoObrigatorio)) {
-                utils.adicionarErroSemantico(ctx.getStart(), "O atributo obrigatorio '" + atributoObrigatorio + "' nao foi declarado.");
             }
         }
 

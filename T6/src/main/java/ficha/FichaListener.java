@@ -97,6 +97,16 @@ public interface FichaListener extends ParseTreeListener {
 	 */
 	void exitBlocoCaracteristicas(FichaParser.BlocoCaracteristicasContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link FichaParser#blocoCaracteristicasCriar}.
+	 * @param ctx the parse tree
+	 */
+	void enterBlocoCaracteristicasCriar(FichaParser.BlocoCaracteristicasCriarContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link FichaParser#blocoCaracteristicasCriar}.
+	 * @param ctx the parse tree
+	 */
+	void exitBlocoCaracteristicasCriar(FichaParser.BlocoCaracteristicasCriarContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link FichaParser#atribuicaoCaracteristica}.
 	 * @param ctx the parse tree
 	 */

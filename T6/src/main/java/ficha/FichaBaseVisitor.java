@@ -80,6 +80,13 @@ public class FichaBaseVisitor<T> extends AbstractParseTreeVisitor<T> implements 
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
+	@Override public T visitBlocoCaracteristicasCriar(FichaParser.BlocoCaracteristicasCriarContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
 	@Override public T visitAtribuicaoCaracteristica(FichaParser.AtribuicaoCaracteristicaContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}

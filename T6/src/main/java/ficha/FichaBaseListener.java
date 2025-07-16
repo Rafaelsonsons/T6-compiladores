@@ -124,6 +124,18 @@ public class FichaBaseListener implements FichaListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterBlocoCaracteristicasCriar(FichaParser.BlocoCaracteristicasCriarContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitBlocoCaracteristicasCriar(FichaParser.BlocoCaracteristicasCriarContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterAtribuicaoCaracteristica(FichaParser.AtribuicaoCaracteristicaContext ctx) { }
 	/**
 	 * {@inheritDoc}

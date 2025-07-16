@@ -1,20 +1,21 @@
-Nome: "Eusebio";
+Nome: "Eusébio";
 Classe: Mago;
-Nivel: 8;
+Nivel: 7;
 
 Caracteristicas {
-	Forca: 9;
-	Destreza: 17;
-	Constituicao: 11;
-	Inteligencia: 18;
-	Sabedoria: 6;
-	Carisma: 15;
+	Forca: 10;
+	Destreza: 10;
+	Constituicao: 10;
+	Inteligencia: 20;
+	Sabedoria: 20;
+	Carisma: 5;
 }
 
+}
 Atributos {
-	Precisao: 24;
+	Precisao: 17;
 	Armadura: 20;
-	Iniciativa: 17;
-	Movimento: 170;
-	PV: 77;
+	Iniciativa: 10;
+	Movimento: 100;
+	PV: 70;
 }
