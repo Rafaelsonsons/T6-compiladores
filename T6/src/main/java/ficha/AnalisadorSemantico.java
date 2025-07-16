@@ -7,8 +7,9 @@ import java.util.ArrayList;
 public class AnalisadorSemantico extends FichaBaseVisitor<Void> {
 
     private final ArrayList<TabelaDeSimbolos> tabelas;
-    private TabelaDeSimbolos tabela;
     private final AnalisadorSemanticoUtils utils;
+
+    private TabelaDeSimbolos tabela;
 
     public AnalisadorSemantico() {
         this.tabelas = new ArrayList<TabelaDeSimbolos>();
