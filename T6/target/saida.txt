@@ -3,14 +3,19 @@ Classe: Mago;
 Nivel: 7;
 
 Caracteristicas {
-	Forca: null;
-	Destreza: null;
-	Constituicao: null;
-	Inteligencia: null;
-	Sabedoria: null;
-	Carisma: null;
+	Forca: 7;
+	Destreza: 11;
+	Constituicao: 9;
+	Inteligencia: 8;
+	Sabedoria: 9;
+	Carisma: 10;
 }
 
 Atributos {
-	Stats: Random;
+	Precisao: 7;
+	Armadura: 7;
+	Iniciativa: 7;
+	Movimento: 7;
+	PV: 7;
+	PV_MAX: 7;
 }

@@ -3,10 +3,14 @@ package ficha;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
+import java.util.random.RandomGenerator;
 
 public class EscritorDeFicha {
+
+    Random d6 = new Random();
+    int d6min = 1;
+    int d6max = 6;
 
     private final TabelaDeSimbolos tabela;
 
@@ -14,13 +18,14 @@ public class EscritorDeFicha {
         this.tabela = tabela;
     }
 
-    /**
-     * Escreve a ficha formatada em um arquivo de destino.
-     * @param caminhoArquivo O nome do arquivo a ser criado (ex: "ficha_final.txt").
-     */
     public void escreverFicha(String caminhoArquivo) {
         // Usando try-with-resources para garantir que o writer seja fechado.
         try (PrintWriter writer = new PrintWriter(new FileWriter(caminhoArquivo))) {
+
+            ArrayList<Integer> caracvalues = new ArrayList<>();
+            for (int i = 0; i < 6; i++) {
+                caracvalues.add(d6.nextInt(d6min, d6max)+d6.nextInt(d6min, d6max)+d6.nextInt(d6min, d6max));}
+            int aux = 0;
 
             // Obtém as informações básicas da tabela.
             String nome = tabela.getValor("Nome");
@@ -33,26 +38,21 @@ public class EscritorDeFicha {
             writer.println("Nivel: " + nivel + ";");
             writer.println();
 
+
             // Escreve o bloco de Características.
             writer.println("Caracteristicas {");
             for (String carac : AnalisadorSemanticoUtils.CARACTERISTICAS_OBRIGATORIAS) {
-                writer.println("\t" + carac + ": " + tabela.getValor(carac) + ";");
+                writer.println("\t" + carac + ": " + caracvalues.get(aux) + ";");
+                aux++;
             }
             writer.println("}");
             writer.println();
-
+            aux = 0;
             // Escreve o bloco de Atributos.
             writer.println("Atributos {");
             // Para encontrar os atributos, pegamos todos os símbolos e removemos os que já conhecemos.
-            Set<String> simbolosConhecidos = new HashSet<>(AnalisadorSemanticoUtils.CARACTERISTICAS_OBRIGATORIAS);
-            simbolosConhecidos.add("Nome");
-            simbolosConhecidos.add("Classe");
-            simbolosConhecidos.add("Nivel");
-
-            for (String simbolo : tabela.todosOsSimbolos()) {
-                if (!simbolosConhecidos.contains(simbolo)) {
-                    writer.println("\t" + simbolo + ": " + tabela.getValor(simbolo) + ";");
-                }
+            for (String atrib : AnalisadorSemanticoUtils.ATRIBUTOS_OBRIGATORIOS) {
+                writer.println("\t" + atrib + ": " + caracvalues.get(aux)+ ";");
             }
             writer.println("}");
 

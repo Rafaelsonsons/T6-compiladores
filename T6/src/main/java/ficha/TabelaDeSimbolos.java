@@ -24,7 +24,4 @@ public class TabelaDeSimbolos {
         return tabela.get(nome);
     }
 
-    public Set<String> todosOsSimbolos() {
-        return tabela.keySet();
-    }
 }
