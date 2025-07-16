@@ -6,6 +6,7 @@ import org.antlr.v4.runtime.CommonTokenStream;
 import org.antlr.v4.runtime.tree.ParseTree;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 //A ideia é ler um arquivo com uns comandos e verificar se atende as regras
 //e interpreta ele, printando o que foi entendido
@@ -41,7 +42,7 @@ public class Principal {
             if (utils.semErros()) {
                 System.out.println("Analise semantica concluida com sucesso!");
 
-                EscritorDeFicha escritor = new EscritorDeFicha(analisador.getTabela());
+                EscritorDeFicha escritor = new EscritorDeFicha(analisador.getTabelas());
                 escritor.escreverFicha(arquivoSaida);
                 System.out.println("Ficha gerada com sucesso em '" + arquivoSaida + "'");
 

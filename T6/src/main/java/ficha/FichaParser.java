@@ -132,7 +132,7 @@ public class FichaParser extends Parser {
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof FichaVisitor ) return ((FichaVisitor<? extends T>)visitor).visitFicha(this);
+			if ( visitor instanceof FichaVisitor) return ((FichaVisitor<? extends T>)visitor).visitFicha(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -201,7 +201,7 @@ public class FichaParser extends Parser {
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof FichaVisitor ) return ((FichaVisitor<? extends T>)visitor).visitDeclaracao(this);
+			if ( visitor instanceof FichaVisitor) return ((FichaVisitor<? extends T>)visitor).visitDeclaracao(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -275,7 +275,7 @@ public class FichaParser extends Parser {
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof FichaVisitor ) return ((FichaVisitor<? extends T>)visitor).visitClasse(this);
+			if ( visitor instanceof FichaVisitor) return ((FichaVisitor<? extends T>)visitor).visitClasse(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -332,7 +332,7 @@ public class FichaParser extends Parser {
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof FichaVisitor ) return ((FichaVisitor<? extends T>)visitor).visitCaracteristica(this);
+			if ( visitor instanceof FichaVisitor) return ((FichaVisitor<? extends T>)visitor).visitCaracteristica(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -388,7 +388,7 @@ public class FichaParser extends Parser {
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof FichaVisitor ) return ((FichaVisitor<? extends T>)visitor).visitAtributo(this);
+			if ( visitor instanceof FichaVisitor) return ((FichaVisitor<? extends T>)visitor).visitAtributo(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -444,7 +444,7 @@ public class FichaParser extends Parser {
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof FichaVisitor ) return ((FichaVisitor<? extends T>)visitor).visitDeclaracaoNome(this);
+			if ( visitor instanceof FichaVisitor) return ((FichaVisitor<? extends T>)visitor).visitDeclaracaoNome(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -499,7 +499,7 @@ public class FichaParser extends Parser {
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof FichaVisitor ) return ((FichaVisitor<? extends T>)visitor).visitDeclaracaoClasse(this);
+			if ( visitor instanceof FichaVisitor) return ((FichaVisitor<? extends T>)visitor).visitDeclaracaoClasse(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -552,7 +552,7 @@ public class FichaParser extends Parser {
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof FichaVisitor ) return ((FichaVisitor<? extends T>)visitor).visitDeclaracaoNivel(this);
+			if ( visitor instanceof FichaVisitor) return ((FichaVisitor<? extends T>)visitor).visitDeclaracaoNivel(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -609,7 +609,7 @@ public class FichaParser extends Parser {
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof FichaVisitor ) return ((FichaVisitor<? extends T>)visitor).visitBlocoCaracteristicas(this);
+			if ( visitor instanceof FichaVisitor) return ((FichaVisitor<? extends T>)visitor).visitBlocoCaracteristicas(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -678,7 +678,7 @@ public class FichaParser extends Parser {
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof FichaVisitor ) return ((FichaVisitor<? extends T>)visitor).visitBlocoCaracteristicasCriar(this);
+			if ( visitor instanceof FichaVisitor) return ((FichaVisitor<? extends T>)visitor).visitBlocoCaracteristicasCriar(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -745,7 +745,7 @@ public class FichaParser extends Parser {
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof FichaVisitor ) return ((FichaVisitor<? extends T>)visitor).visitAtribuicaoCaracteristica(this);
+			if ( visitor instanceof FichaVisitor) return ((FichaVisitor<? extends T>)visitor).visitAtribuicaoCaracteristica(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -802,7 +802,7 @@ public class FichaParser extends Parser {
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof FichaVisitor ) return ((FichaVisitor<? extends T>)visitor).visitBlocoAtributos(this);
+			if ( visitor instanceof FichaVisitor) return ((FichaVisitor<? extends T>)visitor).visitBlocoAtributos(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -871,7 +871,7 @@ public class FichaParser extends Parser {
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof FichaVisitor ) return ((FichaVisitor<? extends T>)visitor).visitAtribuicaoAtributo(this);
+			if ( visitor instanceof FichaVisitor) return ((FichaVisitor<? extends T>)visitor).visitAtribuicaoAtributo(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -930,7 +930,7 @@ public class FichaParser extends Parser {
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof FichaVisitor ) return ((FichaVisitor<? extends T>)visitor).visitCriarFichaRANDOM(this);
+			if ( visitor instanceof FichaVisitor) return ((FichaVisitor<? extends T>)visitor).visitCriarFichaRANDOM(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -997,7 +997,7 @@ public class FichaParser extends Parser {
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof FichaVisitor ) return ((FichaVisitor<? extends T>)visitor).visitCriarFicha(this);
+			if ( visitor instanceof FichaVisitor) return ((FichaVisitor<? extends T>)visitor).visitCriarFicha(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1066,7 +1066,7 @@ public class FichaParser extends Parser {
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof FichaVisitor ) return ((FichaVisitor<? extends T>)visitor).visitLerFichaPronta(this);
+			if ( visitor instanceof FichaVisitor) return ((FichaVisitor<? extends T>)visitor).visitLerFichaPronta(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1132,7 +1132,7 @@ public class FichaParser extends Parser {
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof FichaVisitor ) return ((FichaVisitor<? extends T>)visitor).visitLerFichaProntalvlup(this);
+			if ( visitor instanceof FichaVisitor) return ((FichaVisitor<? extends T>)visitor).visitLerFichaProntalvlup(this);
 			else return visitor.visitChildren(this);
 		}
 	}

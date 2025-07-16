@@ -2,15 +2,21 @@ package ficha;
 
 import org.antlr.v4.runtime.Token;
 
+import java.util.ArrayList;
+
 public class AnalisadorSemantico extends FichaBaseVisitor<Void> {
 
-    private final TabelaDeSimbolos tabela;
+    private final ArrayList<TabelaDeSimbolos> tabelas;
+    private TabelaDeSimbolos tabela;
     private final AnalisadorSemanticoUtils utils;
 
     public AnalisadorSemantico() {
+        this.tabelas = new ArrayList<TabelaDeSimbolos>();
         this.tabela = new TabelaDeSimbolos(); // A tabela é criada uma vez.
         this.utils = new AnalisadorSemanticoUtils();
     }
+
+    public ArrayList<TabelaDeSimbolos> getTabelas() {return tabelas;}
 
     public TabelaDeSimbolos getTabela() { return tabela; }
 
@@ -25,6 +31,9 @@ public class AnalisadorSemantico extends FichaBaseVisitor<Void> {
 
     @Override
     public Void visitCriarFicha(FichaParser.CriarFichaContext ctx) {
+
+        tabela = new TabelaDeSimbolos();
+
         // Adiciona as informações básicas da ficha na tabela global.
         tabela.adicionar("Nome", limparString(ctx.nome.getText()));
         tabela.adicionar("Classe", ctx.classe().getText());
@@ -43,6 +52,8 @@ public class AnalisadorSemantico extends FichaBaseVisitor<Void> {
             }
         }
 
+        tabelas.add(tabela);
+
         return null;
     }
 
@@ -50,16 +61,23 @@ public class AnalisadorSemantico extends FichaBaseVisitor<Void> {
     public Void visitCriarFichaRANDOM(FichaParser.CriarFichaRANDOMContext ctx) {
         // Para a ficha RANDOM, apenas adicionamos as informações básicas.
         // Não há necessidade de verificar características obrigatórias.
+        tabela = new TabelaDeSimbolos();
+
         tabela.adicionar("Nome", limparString(ctx.nome.getText()));
         tabela.adicionar("Classe", ctx.classe().getText());
         tabela.adicionar("Nivel", ctx.NUM().getText());
         tabela.adicionar("Tipo", "Random"); // Marca que os stats são aleatórios
+
+        tabelas.add(tabela);
 
         return null;
     }
 
     @Override
     public Void visitLerFichaPronta(FichaParser.LerFichaProntaContext ctx) {
+
+        tabela = new TabelaDeSimbolos();
+
         tabela.adicionar("Nome", limparString(ctx.declaracaoNome().nome.getText()));
         tabela.adicionar("Classe", ctx.declaracaoClasse().classe().getText());
         tabela.adicionar("Nivel", ctx.declaracaoNivel().nivel.getText());
@@ -80,12 +98,15 @@ public class AnalisadorSemantico extends FichaBaseVisitor<Void> {
             }
         }
 
+        tabelas.add(tabela);
 
         return null;
     }
 
     @Override
     public Void visitLerFichaProntalvlup (FichaParser.LerFichaProntalvlupContext ctx) {
+
+        tabela = new TabelaDeSimbolos();
 
         tabela.adicionar("Nome", limparString(ctx.declaracaoNome().nome.getText()));
         tabela.adicionar("Classe", ctx.declaracaoClasse().classe().getText());
@@ -107,12 +128,15 @@ public class AnalisadorSemantico extends FichaBaseVisitor<Void> {
             }
         }
 
+        tabelas.add(tabela);
+
         return null;
     }
 
     // REGRA: Não pode haver características repetidas.
     @Override
     public Void visitAtribuicaoCaracteristica(FichaParser.AtribuicaoCaracteristicaContext ctx) {
+
         String nomeCaracteristica = ctx.nome.getText();
         if (tabela.existe(nomeCaracteristica)) {
             utils.adicionarErroSemantico(ctx.nome.getStart(), "A caracteristica '" + nomeCaracteristica + "' ja foi declarada.");
@@ -128,6 +152,7 @@ public class AnalisadorSemantico extends FichaBaseVisitor<Void> {
     // REGRA: Não pode haver atributos repetidos.
     @Override
     public Void visitAtribuicaoAtributo(FichaParser.AtribuicaoAtributoContext ctx) {
+
         String nomeAtributo = ctx.nome.getText();
         if (tabela.existe(nomeAtributo)) {
             utils.adicionarErroSemantico(ctx.nome.getStart(), "O atributo '" + nomeAtributo + "' ja foi declarado.");

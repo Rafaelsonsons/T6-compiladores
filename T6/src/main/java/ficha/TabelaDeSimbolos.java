@@ -23,4 +23,12 @@ public class TabelaDeSimbolos {
         return tabela.get(nome);
     }
 
+    public void clear() {
+        tabela.clear();
+    }
+
+    public int count(String nome) {
+        return tabela.get(nome).length();
+    }
+
 }
