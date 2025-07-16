@@ -1,0 +1,63 @@
+Nome: "Jonas";
+Classe: Guerreiro;
+Nivel: 7;
+
+Caracteristicas {
+	Forca: 10;
+	Destreza: 10;
+	Constituicao: 10;
+	Inteligencia: 20;
+	Sabedoria: 20;
+	Carisma: 5;
+}
+
+
+Atributos {
+	Precisao: 17;
+	Armadura: 20;
+	Iniciativa: 10;
+	Movimento: 100;
+	PV: 70;
+}
+
+Nome: "Ricardo";
+Classe: Bardo;
+Nivel: 2;
+
+Caracteristicas {
+	Forca: 10;
+	Destreza: 16;
+	Constituicao: 12;
+	Inteligencia: 14;
+	Sabedoria: 10;
+	Carisma: 18;
+}
+
+Atributos {
+	Precisao: 18;
+	Armadura: 22;
+	Iniciativa: 16;
+	Movimento: 160;
+	PV: 24;
+}
+
+Nome: "Kristopher";
+Classe: Clerigo;
+Nivel: 2;
+
+Caracteristicas {
+	Forca: 10;
+	Destreza: 10;
+	Constituicao: 14;
+	Inteligencia: 14;
+	Sabedoria: 16;
+	Carisma: 16;
+}
+
+Atributos {
+	Precisao: 12;
+	Armadura: 24;
+	Iniciativa: 10;
+	Movimento: 100;
+	PV: 28;
+}

@@ -1,0 +1,26 @@
+Ladino, "Bernardo", 2, {
+Forca: 10;
+Destreza: 16;
+Constituicao: 14;
+Inteligencia: 14;
+Sabedoria: 10;
+Carisma: 10;
+}
+
+Clerigo, "Kristopher", 2, {
+Forca: 10;
+Destreza: 10;
+Constituicao: 14;
+Inteligencia: 14;
+Sabedoria: 16;
+Carisma: 16;
+}
+
+Bardo, "Ricardo", 2, {
+Forca: 10;
+Destreza: 16;
+Constituicao: 12;
+Inteligencia: 14;
+Sabedoria: 10;
+Carisma: 18;
+}

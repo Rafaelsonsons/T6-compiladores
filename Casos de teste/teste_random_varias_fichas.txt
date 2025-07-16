@@ -1,0 +1,3 @@
+Ladino, "Bernardo", 2, Random
+Mago, "Oliver", 3, Random
+Guerreiro, "Alex", 1, Random
