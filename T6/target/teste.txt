@@ -1,9 +1,54 @@
-Mago, "Eusébio", 7, { 
-Forca: 10;
-Destreza: 10;
-Constituicao: 10;
-Inteligencia: 20;
-Sabedoria: 20;
-Carisma: 5;
+Mago, "Eusébio", 7, Random
+
+LVLUP
+Nome: "Nieve";
+Classe: Ladino;
+Nivel: 6;
+
+Caracteristicas {
+	Forca: 9;
+	Destreza: 5;
+	Constituicao: 9;
+	Inteligencia: 9;
+	Sabedoria: 11;
+	Carisma: 6;
+}
+
+Atributos {
+	Precisao: 11;
+	Armadura: 18;
+	Iniciativa: 5;
+	Movimento: 50;
+	PV: 54;
+}
+
+Guerreiro, "Vowler" , 6, {
+	Forca: 15;
+	Destreza: 5;
+	Constituicao: 15;
+	Inteligencia: 10;
+	Sabedoria: 11;
+	Carisma: 6;
+}
+
+Nome: "Tim";
+Classe: Clerigo;
+Nivel: 7;
+
+Caracteristicas {
+	Forca: 9;
+	Destreza: 5;
+	Constituicao: 9;
+	Inteligencia: 9;
+	Sabedoria: 11;
+	Carisma: 6;
+}
+
+Atributos {
+	Precisao: 11;
+	Armadura: 18;
+	Iniciativa: 5;
+	Movimento: 50;
+	PV: 54;
 }
 

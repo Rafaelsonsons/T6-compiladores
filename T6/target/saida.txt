@@ -3,18 +3,82 @@ Classe: Mago;
 Nivel: 7;
 
 Caracteristicas {
-	Forca: 10;
+	Forca: 6;
 	Destreza: 10;
 	Constituicao: 10;
-	Inteligencia: 20;
-	Sabedoria: 20;
-	Carisma: 5;
+	Inteligencia: 9;
+	Sabedoria: 6;
+	Carisma: 9;
 }
 
 Atributos {
 	Precisao: 17;
-	Armadura: 20;
+	Armadura: 16;
 	Iniciativa: 10;
 	Movimento: 100;
-	PV: 70;
+	PV: 63;
 }
+
+Nome: "Nieve";
+Classe: Ladino;
+Nivel: 7;
+
+Caracteristicas {
+	Forca: 12;
+	Destreza: 6;
+	Constituicao: 14;
+	Inteligencia: 11;
+	Sabedoria: 13;
+	Carisma: 7;
+}
+
+Atributos {
+	Precisao: 12;
+	Armadura: 26;
+	Iniciativa: 6;
+	Movimento: 60;
+	PV: 84;
+}
+
+Nome: "Vowler";
+Classe: Guerreiro;
+Nivel: 6;
+
+Caracteristicas {
+	Forca: 15;
+	Destreza: 5;
+	Constituicao: 15;
+	Inteligencia: 10;
+	Sabedoria: 11;
+	Carisma: 6;
+}
+
+Atributos {
+	Precisao: 11;
+	Armadura: 30;
+	Iniciativa: 5;
+	Movimento: 50;
+	PV: 90;
+}
+
+Nome: "Tim";
+Classe: Clerigo;
+Nivel: 7;
+
+Caracteristicas {
+	Forca: 9;
+	Destreza: 5;
+	Constituicao: 9;
+	Inteligencia: 9;
+	Sabedoria: 11;
+	Carisma: 6;
+}
+
+Atributos {
+	Precisao: 11;
+	Armadura: 18;
+	Iniciativa: 5;
+	Movimento: 50;
+	PV: 54;
+}
+
