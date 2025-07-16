@@ -67,7 +67,8 @@ declaracao
     | lerFichaPronta
     | lerFichaProntalvlup
     ;
-
+//Nao vai dar tempo de fazer um lerFichaProntalvlupManual
+//ideia seria poder alterar os atributos manualmente
 // Tipos de classes permitidas (referencia os tokens do lexer).
 classe
     : GUERREIRO | MAGO | CLERIGO | LADINO | BARDO

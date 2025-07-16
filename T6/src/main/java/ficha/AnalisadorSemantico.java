@@ -67,7 +67,7 @@ public class AnalisadorSemantico extends FichaBaseVisitor<Void> {
         tabela.adicionar("Nome", limparString(ctx.declaracaoNome().nome.getText()));
         tabela.adicionar("Classe", ctx.declaracaoClasse().classe().getText());
         tabela.adicionar("Nivel", ctx.declaracaoNivel().nivel.getText());
-
+        //esse tipo marca qual saida vai dar no txt
         tabela.adicionar("Tipo", "Ler");
 
         super.visitLerFichaPronta(ctx);
@@ -94,7 +94,7 @@ public class AnalisadorSemantico extends FichaBaseVisitor<Void> {
         tabela.adicionar("Nome", limparString(ctx.declaracaoNome().nome.getText()));
         tabela.adicionar("Classe", ctx.declaracaoClasse().classe().getText());
         tabela.adicionar("Nivel", ctx.declaracaoNivel().nivel.getText());
-        //la vai eu de novo
+
         tabela.adicionar("Tipo", "UP");
 
         super.visitLerFichaProntalvlup(ctx);
@@ -139,7 +139,7 @@ public class AnalisadorSemantico extends FichaBaseVisitor<Void> {
             String valor = ctx.valor.getText();
             tabela.adicionar(nomeAtributo, valor);
         }
-        // A visita aos filhos não é necessária aqui.
+
         return null;
     }
 }

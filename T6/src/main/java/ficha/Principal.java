@@ -7,10 +7,12 @@ import org.antlr.v4.runtime.tree.ParseTree;
 
 import java.io.IOException;
 
+//A ideia é ler um arquivo com uns comandos e verificar se atende as regras
+//e interpreta ele, printando o que foi entendido
 public class Principal {
 
     public static void main(String[] args) {
-        // Defina aqui o nome do arquivo de entrada e saída.
+        // puxa do terminal mesmo
         String arquivoEntrada = args[0];
         String arquivoSaida = args[1];
 
