@@ -1,0 +1,8 @@
+Clerigo, "Henrique", 11 { /* Erro 1: Falta uma vírgula */
+(Forca: 10;
+Destreza: 10
+Constituicao: 14; /* Erro 2: Falta um ponto e vírgula */
+Inteligencia, 12;  /* Erro 3: Usou vírgula em vez de dois-pontos */
+Sabedoria: 16;
+Carisma: 14;)
+}

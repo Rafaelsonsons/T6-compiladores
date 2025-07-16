@@ -1,0 +1,7 @@
+Mago, "Samuel", 14, {
+Forca: 10;
+Constituicao: 14; /*Destreza ausente*/
+Inteligencia: 16;
+Sabedoria: 12;
+Carisma: 8;
+}

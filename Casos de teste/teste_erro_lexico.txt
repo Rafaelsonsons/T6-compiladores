@@ -1,0 +1,8 @@
+Guerreiro, "Carlos", 5, {
+Forca: 16;
+Destreza: 14;
+Constituicao: 16;
+Inteligencia: 9.5; /* Valor com ponto flutuante */
+Sabedoria: 12;
+Carisma: 10#; /* Caractere inválido */
+}

@@ -1,0 +1,2 @@
+Ladino, "Bernardo", 2, Random
+

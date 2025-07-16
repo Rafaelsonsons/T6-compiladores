@@ -1,0 +1,21 @@
+Nome: "Jonas";
+Classe: Guerreiro;
+Nivel: 7;
+
+Caracteristicas {
+	Forca: 10;
+	Destreza: 10;
+	Constituicao: 10;
+	Inteligencia: 20;
+	Sabedoria: 20;
+	Carisma: 5;
+}
+
+
+Atributos {
+	Precisao: 17;
+	Precisao: 20; /*Atributo repetido*/
+	Iniciativa: 10;
+	Movimento: 100;
+	PV: 70;
+}

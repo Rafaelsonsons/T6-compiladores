@@ -1,0 +1,8 @@
+Ladino, "Bernardo", 2, {
+Forca: 10;
+Destreza: 16;
+Constituicao: 14;
+Inteligencia: 14;
+Sabedoria: 10;
+Carisma: 10;
+}

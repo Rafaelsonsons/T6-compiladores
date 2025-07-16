@@ -1,0 +1,8 @@
+Mago, "Samuel", 14, {
+Forca: 10;
+Forca: 16; /*Característica repetida*/
+Constituicao: 14;
+Inteligencia: 16;
+Sabedoria: 12;
+Carisma: 8;
+}
